@@ -14,32 +14,33 @@
 				<div class="price-box">
 					<span  class="item">Product Price</span>
 					<span  class="item">Taxes</span>
-					<span class="item">$39<sup>00</sup></span>
-					<span class="item">$2<sup>25</sup></span>
-					<label class="discount item">Discount</label>
-					<input  
+					<label for="promo-code" class="discount item">Discount</label>
+					<span class="item dollar">$39<sup>00</sup></span>
+					<span class="item dollar">$2<sup>25</sup></span>
+					<input 
+						id="promo-code" 
 						class="item"
 						type="text"
 						name="promo-code"
-						placeholder="Inser Promo Code"
+						placeholder="Insert Promo Code"
 						pattern="[A-Za-z0-9]{9}"
 						required>
 				
 				</div>
 				<div class="total">
 					<span>Total</span>
-					<span>$41<sup>25</sup></span>
+					<span class="dollar">$41<sup>25</sup></span>
 				</div>
 				<img class="map" src="./img/map.jpg"> 
 			</div>
-			<form class="bill-form" action="">
+			<form class="bill-form" method="post" name="bill-form">
 				<input type="text" required placeholder="Your name">
 				<input type="text" required placeholder="Apartment #">
 				<input type="tel" required placeholder="Phone Number">
 				<input type="email" required placeholder="Email Address">
 				<input type="password" required placeholder="Password">
 				<input type="password" required placeholder="Password Confirmation">
-				<input type="checkbox" class="switcher"><label class="switcher">Signup For Newsletter &amp Discounts</label>
+				<input type="checkbox" id="switcher" class="switcher" ><label for="switcher" class="switcher" >Signup For Newsletter &amp Discounts</label>
 			</form>
 		</section>
 		<section class="actions">
