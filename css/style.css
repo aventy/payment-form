@@ -434,6 +434,7 @@ button {
   overflow: visible;
   padding: 0;
   margin: 0;
+  outline: 0;
 }
 
 /*base file end*/
@@ -445,7 +446,9 @@ main,
 .bill-form,
 .actions,
 .price-box,
-.total {
+.total,
+.back,
+.resset-fields {
   display: flex;
 }
 
@@ -518,12 +521,16 @@ h1 {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
--webkit-input-placeholder,
--moz-placeholder,
--ms-input-placeholder {
+.price-box input::-webkit-input-placeholder,
+.bill-form input::-webkit-input-placeholder {
+  padding-left: 1.2em;
   font-size: 0.8em;
-  color: #000;
+  color: #fff;
   font-weight: 400;
+}
+
+.bill-form input::-webkit-input-placeholder {
+  color: #000;
 }
 
 .total {
@@ -601,38 +608,47 @@ label.switcher::after {
   background-image: linear-gradient(-20deg, #63c089 0%, #25c2e6 100%);
 }
 
+.actions {
+  margin-top: 46px;
+  align-items: center;
+}
+
 .round-btn {
-  width: 126px;
-  height: 126px;
-  border-radius: 90px;
+  width: 63px;
+  height: 63px;
+  border-radius: 50%;
   border: 3px solid #c6c6c6;
 }
 
 .back {
   display: block;
-}
-.back img {
-  margin: 46px;
-  width: 20px;
-  height: 34px;
+  background: url("../img/shevron.svg") no-repeat center;
+  background-size: 10px 17px;
 }
 
 .pay-now {
-  width: 200px;
-  height: 200px;
-  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 18px;
+  background: url("../img/wallet.svg") no-repeat 50% 30%;
+  background-size: 27px 24px;
   background-color: #4ed7cb;
+}
+.pay-now span {
+  display: block;
+  margin-top: 30px;
+  text-transform: uppercase;
+  color: #fff;
 }
 
 .reset-fields {
-  padding: 27px;
-  background-color: inherit;
+  background: url("../img/reset-field.svg") no-repeat center;
+  background-size: 36px 30px;
 }
 
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
+.act-btn:hover {
+  box-shadow: 3px 5px 10px #ccc;
 }
 
 /*---------------LAYOUT--END--------------*/
